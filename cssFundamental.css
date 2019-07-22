@@ -1,12 +1,14 @@
 body{
     margin: 0;
 }
-.nav-bar {
-    height: 100px;
+header {
+    height: auto;
     width: 100%;
+    min-height: 100px;
     background-color: #000;
     margin: 0;
-    position: fixed;
+    /* position: fixed; */
+    overflow: hidden;
 }
 .logo-home {
     height: auto;
@@ -25,16 +27,48 @@ body{
     font-size: 40px;
     text-decoration: none;
 }
-.nav-menu {
+nav {
+    height: auto;
+}
+nav .nav-menu {
     float: right;
     display: flex;
     list-style-type: none;
-    margin-right: 20%;
+    margin: 0 20% 0 0;
+    height: auto;
+    padding-top: 10px;
+}
+nav .icon {
+    display: none;
+}
+@media (max-width: 1368px) {
+    nav .nav-menu {
+        display: block;
+        margin-top: 40px;
+        text-align: right;
+    }
+
+    nav .nav-menu.responsive .nav-menu-item {
+        display: block;
+        margin-right: 0;
+    }
+
+    nav .icon {
+        display: block;
+        position: absolute;
+        right: 20%;
+        top: 30px;
+        color: #fff;
+        font-size: 30px;
+    }
+    nav .nav-menu .nav-menu-item {
+        display: none;
+    }
 }
 .nav-menu-item {
     margin: 20px;
-    
 }
+
 .item-link-nav {
     text-decoration: none;  
     color: white;
@@ -116,7 +150,7 @@ ul {
     margin: 0;
     padding: 200px 0 0 0;
 }
-.footer{
+footer{
     text-align: center;
     background-color: #2B2D30;
     width: 100%;

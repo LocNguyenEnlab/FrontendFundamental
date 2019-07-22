@@ -2,21 +2,29 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="./cssFundamental.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div class="nav-bar">
+        <header>
             <a href="#" class="logo-home" style="text-decoration: none">
                 <span class="first-logo-home">max</span>
                 <span class="last-logo-home">design</span>
             </a>
-            <ul class="nav-menu">
-                <li class="nav-menu-item"><a href="#" class="item-link-nav">Home</a></li>
-                <li class="nav-menu-item"><a href="#" class="item-link-nav">About</a></li>
-                <li class="nav-menu-item"><a href="#" class="item-link-nav">News</a></li>
-                <li class="nav-menu-item"><a href="#" class="item-link-nav">Article</a></li>
-                <li class="nav-menu-item"><a href="#" class="item-link-nav">Training</a></li>
-            </ul>
-        </div>
+            <nav>
+                <ul id="nav-menu" class="nav-menu">
+                    <li class="nav-menu-item"><a href="#" class="item-link-nav">Home</a></li>
+                    <li class="nav-menu-item"><a href="#" class="item-link-nav">About</a></li>
+                    <li class="nav-menu-item"><a href="#" class="item-link-nav">News</a></li>
+                    <li class="nav-menu-item"><a href="#" class="item-link-nav">Article</a></li>
+                    <li class="nav-menu-item"><a href="#" class="item-link-nav">Training</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="icon" onclick="openNavMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <div class="first-content">
             <div class="wrap">
                 <p class="title-white">Exciting, engaging website</p>
@@ -61,7 +69,7 @@
                 <a href="#" class="btn-home-page">MORE ARTICLES</a>
             </div>
         </div>
-        <div class="footer">
+        <footer>
             <a href="#" class="btn-home-page">CONTACT US</a>
             <br>
             <ul class="contact-list">
@@ -69,6 +77,16 @@
                 <li class="item-link-contact"><a href="#"><img src="./linkedin.png"  class="icon-contact"></a></li>
                 <li class="item-link-contact"><a href="#"><img src="./twitter.png"  class="icon-contact"></a></li>
             </ul>
-        </div>
+        </footer>
+        <script>
+            function openNavMenu() {
+                var x = document.getElementById("nav-menu");
+                if (x.className === "nav-menu") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav-menu";
+                }
+            }
+        </script>
     </body>
 </html>
