@@ -43,9 +43,16 @@ nav .icon {
 }
 @media (max-width: 1368px) {
     nav .nav-menu {
+        height: 90px;
         display: block;
-        margin-top: 40px;
         text-align: right;
+        transition: height .5s;
+    }
+
+    nav .nav-menu.responsive {
+        margin-top: 40px;
+        height: 290px;
+        transition: height .5s;
     }
 
     nav .nav-menu.responsive .nav-menu-item {
